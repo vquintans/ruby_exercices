@@ -13,11 +13,11 @@ Se incluye Gemfile y Guardfile que permiten instalar las librerías necesarias.
 
 Para preparar el entorno es suficiente con ejecutar:
    
-   bundle install
+   `bundle install`
     
-Una vez que tenemo el entorno preparado abrimos una consola y la dejamos corriendo con el comando:
+Una vez que tenemos el entorno preparado abrimos una consola y la dejamos corriendo con el comando:
    
-   guard
+   `guard`
    
 Guard ejecutará constantemente los tests cada vez que se guarde alguno de los ficheros con los que estamos trabajando, e inmediatamente veremos el resultado de los tests afectados.
 
