@@ -1,8 +1,8 @@
 require 'rubygems'
+require "bundler/setup"
 
 load 'lib/math_games.rb'
 load 'lib/string_game.rb'
-load 'lib/sort_games.rb'
 load 'lib/carta.rb'
 load 'lib/baraja.rb'
 
