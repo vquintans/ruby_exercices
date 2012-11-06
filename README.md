@@ -34,11 +34,23 @@ Para ejecutar todos los tests en un momento concreto es suficiente con pulsar in
 
 Comandos básicos git:
 
-   * ver el estado del repositorio local con `git status`
-   * añadimos los ficheros que queremos subir con `git add <nombrefichero>`
-   * hacemos un commit en local con `git commit -m "mensaje de commit"`
-   * subimos los cambios al servidor con `git push -u origin master`
+   * `git status`: ver el estado del repositorio local
+   * `git add <nombrefichero>`: añadimos los ficheros que queremos subir
+   * `git commit -m "mensaje de commit"`: hacemos un commit en local
+   * `git push -u origin master`: subimos los cambios a github
 
+
+## Actualizaciones desde el repositorio principal
+
+   `git remote add upstream https://github.com/vquintans/ruby_exercices.git`
+   `git fetch upstream`
+   `git merge upstream/master`
+
+## Envío de ejercicios resueltos
+
+Una vez subidos los cambios a github vamos en un navegador a la web de github y pulsamos sobre "Pull Request". Esto iniciará automáticamente los tests en el entorno de integración continua http://travis-ci.org y podremos ver en https://travis-ci.org/#!/vquintans/ruby_exercices/pull_requests el resultado de la ejecución de los mismos.
+
+Los ejercicios se consideran correctos cuando pasan todos los tests sin haber modificado ninguno de los ficheros de test.
 
 ## Ejercicios. 
 
