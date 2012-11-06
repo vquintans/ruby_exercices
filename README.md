@@ -15,15 +15,15 @@ Lo mejor para trabajar sobre github es tener cada alumno una cuenta gratuita.
 
 Una vez tenemos nuestra propia cuenta haremos un "fork" del repositorio https://github.com/vquintans/ruby_exercices (se puede hacer desde la propia web), y trabajaremos sobre dicho proyecto, que nos bajaremos a nuestra máquina con el comando:
 
-    `git clone git@github.com:<nombre_usuario>/ruby_exercices.git`
+    git clone git@github.com:<nombre_usuario>/ruby_exercices.git
 
 Para preparar el entorno es suficiente con ejecutar:
    
-   `bundle install`
+    bundle install
     
 Una vez que tenemos el entorno preparado abrimos una consola y la dejamos corriendo con el comando:
    
-   `guard`
+    guard
    
 Guard ejecutará constantemente los tests cada vez que se guarde alguno de los ficheros con los que estamos trabajando, e inmediatamente veremos el resultado de los tests afectados.
 
