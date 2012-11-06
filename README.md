@@ -42,9 +42,9 @@ Comandos básicos git:
 
 ## Actualizaciones desde el repositorio principal
 
-   `git remote add upstream https://github.com/vquintans/ruby_exercices.git`
-   `git fetch upstream`
-   `git merge upstream/master`
+    git remote add upstream https://github.com/vquintans/ruby_exercices.git
+    git fetch upstream
+    git merge upstream/master
 
 ## Envío de ejercicios resueltos
 
