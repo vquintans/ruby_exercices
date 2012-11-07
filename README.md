@@ -15,15 +15,15 @@ Lo mejor para trabajar sobre github es tener cada alumno una cuenta gratuita.
 
 Una vez tenemos nuestra propia cuenta haremos un "fork" del repositorio https://github.com/vquintans/ruby_exercices (se puede hacer desde la propia web), y trabajaremos sobre dicho proyecto, que nos bajaremos a nuestra máquina con el comando:
 
-    `git clone git@github.com:<nombre_usuario>/ruby_exercices.git`
+    git clone git@github.com:<nombre_usuario>/ruby_exercices.git
 
 Para preparar el entorno es suficiente con ejecutar:
    
-   `bundle install`
+    bundle install
     
 Una vez que tenemos el entorno preparado abrimos una consola y la dejamos corriendo con el comando:
    
-   `guard`
+    guard
    
 Guard ejecutará constantemente los tests cada vez que se guarde alguno de los ficheros con los que estamos trabajando, e inmediatamente veremos el resultado de los tests afectados.
 
@@ -34,11 +34,23 @@ Para ejecutar todos los tests en un momento concreto es suficiente con pulsar in
 
 Comandos básicos git:
 
-   * ver el estado del repositorio local con `git status`
-   * añadimos los ficheros que queremos subir con `git add <nombrefichero>`
-   * hacemos un commit en local con `git commit -m "mensaje de commit"`
-   * subimos los cambios al servidor con `git push -u origin master`
+   * `git status`: ver el estado del repositorio local
+   * `git add <nombrefichero>`: añadimos los ficheros que queremos subir
+   * `git commit -m "mensaje de commit"`: hacemos un commit en local
+   * `git push -u origin master`: subimos los cambios a github
 
+
+## Actualizaciones desde el repositorio principal
+
+    git remote add upstream https://github.com/vquintans/ruby_exercices.git
+    git fetch upstream
+    git merge upstream/master
+
+## Envío de ejercicios resueltos
+
+Una vez subidos los cambios a github vamos en un navegador a la web de github y pulsamos sobre "Pull Request". Esto iniciará automáticamente los tests en el entorno de integración continua http://travis-ci.org y podremos ver en https://travis-ci.org/#!/vquintans/ruby_exercices/pull_requests el resultado de la ejecución de los mismos.
+
+Los ejercicios se consideran correctos cuando pasan todos los tests sin haber modificado ninguno de los ficheros de test.
 
 ## Ejercicios. 
 
