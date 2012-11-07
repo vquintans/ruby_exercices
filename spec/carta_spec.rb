@@ -102,12 +102,20 @@ describe Carta do
   end
 
   describe '#to_s' do
-    it 'devuelve un string con la representación de la carta' do
-      as_de_oros.to_s.should == '1 de oros'
-      as_de_copas.to_s.should == '1 de copas'
-      as_de_bastos.to_s.should == '1 de bastos'
-      as_de_espadas.to_s.should == '1 de espadas'
-      tres_de_oros.to_s.should == '3 de oros'
+    context 'as de oros' do
+      it { as_de_oros.to_s.should == '1 de oros' }
+    end
+    context 'as de copas' do
+      it { as_de_copas.to_s.should == '1 de copas' }
+    end
+    context 'as de bastos' do
+      it { as_de_bastos.to_s.should == '1 de bastos' }
+    end
+    context 'as de espadas' do
+      it { as_de_espadas.to_s.should == '1 de espadas' }
+    end
+    context 'tres de oros' do
+      it { tres_de_oros.to_s.should == '3 de oros' }
     end
   end
 
