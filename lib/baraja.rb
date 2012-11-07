@@ -25,7 +25,7 @@ class Baraja
 				mazo += [ Carta.new(palo, valor) ]
 			end
 		end
-		Baraja.new(mazo)
+		Baraja.new(*mazo)
 	end
 
 	def to_s
@@ -41,6 +41,6 @@ class Baraja
 	end
 
 	def barajada
-		Baraja.new(*(@cartas.reverse))
+		Baraja.new(*(@cartas.shuffle))
 	end
 end
