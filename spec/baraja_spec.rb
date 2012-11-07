@@ -84,7 +84,7 @@ describe Baraja do
     it 'contiene todas las cartas de la baraja inicial' do
       completa = Baraja.completa
       desordenada = completa.barajada
-      completa.cartas.each{|carta| desordenada.include?(carta)}
+      completa.cartas.each{|carta| desordenada.cartas.include?(carta)}
     end
     it 'no contiene mas cartas que la baraja inicial' do
       completa = Baraja.completa
