@@ -13,32 +13,28 @@ class Carta
 
 	def mayor_que? (otra_carta)
 		if (@palo == otra_carta.palo)
-			@valor <= otra_carta.valor
+			@valor < otra_carta.valor
 		else
-			@@palos.index(@palo) <= @@palos.index(otra_carta.palo)
+			@@palos.index(@palo) < @@palos.index(otra_carta.palo)
 		end
 	end
 
 	def <=>(otra_carta)
-		if (@palo == otra_carta.palo)
-			if (@valor > otra_carta.valor) 
-				1
-			elsif (@valor < otra_carta.valor) 
-				-1
-			else 
-				0
-			end
+		if (mayor_que? otra_carta) 
+			-1
+		elsif (otra_carta.mayor_que? self)
+			1
 		else
-			if (mayor_que? otra_carta) 
-				-1
-			else
-				1
-			end
+			0
 		end
 	end
 
 	def to_s
 		@valor.to_s + " de " + @palo.to_s
+	end
+
+	def self.palos
+		@@palos
 	end
 
 end
