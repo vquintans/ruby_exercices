@@ -1,6 +1,4 @@
 
-
-
 # Ejercicios Ruby
 
 Los ejercicios consisten en un conjunto de test definidos con Rspec que inicialmente fallarán todos.
