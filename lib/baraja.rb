@@ -22,19 +22,21 @@ class Baraja
 		b = Baraja.new()
 
 		Carta.palos.each do |palo| 
-			for i in 1..12 b.add_carta(Carta.new(palo, i))
+			(1..12).each {|i|  b.add_carta(Carta.new(palo, i)) }
 		end
-
-		#for i in 1..12		
-		#	b.add_carta(Carta.new(:oros, i))
-		#	b.add_carta(Carta.new(:copas, i))
-		#	b.add_carta(Carta.new(:bastos, i))
-		#	b.add_carta(Carta.new(:espadas, i))
-		#end
 
 		b
 	end
 
 	def ordenada
+		Baraja.new(@cartas.sort {|x,y| x<=>y} )
 	end 
+
+	def to_s
+		ordenada.cartas * "\n" 
+	end
+
+	def barajada
+		Baraja.new(@cartas.shuffle(random: Random.new(1)))
+	end
 end
